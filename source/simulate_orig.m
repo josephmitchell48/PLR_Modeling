@@ -1,12 +1,11 @@
-function [t_orig, r_orig] = simulate_orig(pupil_version, tspan)
+function [t_orig, r_orig] = simulate(pupil_version, tspan)
 %function to simulate using FN model 
 %   pupil_version: integer corresponding to the fitted values from Yan
 %        paper
 %   tspan: [t0 t_final] in seconds
 %   Outputs:
 %       t - time points
-%       r_orig(1) - radius values of original model (Yan)
-%       r_orig(2) - velocity values of original model (Yan)
+%       r_orig - radius values of original model (Yan)
 
 
 if pupil_version==1
@@ -68,5 +67,7 @@ options = odeset('RelTol', 1e-6);
 y0 = [2.68 0]; % start at radius of 2.68mm
 
 [t_orig, r_orig] = ode45(f, tspan, y0, options);
+
+r_orig = r_orig(:,1);
 
 end

@@ -10,9 +10,9 @@ nerve2 = FitzNagumo(0.008, 0.139, 0.027, 4.42); % Region 2
 nerve3 = FitzNagumo(0.008, 0.139, 0.022, 4.65); % Region 3
 
 %%% NO DELAY %%%
-f1 = @(t, v) F_N(t, v, nerve1);
-f2 = @(t, v) F_N(t, v, nerve2);
-f3 = @(t, v) F_N(t, v, nerve3);
+f1 = @(t, v) nerve1.dynamics(t, v, nerve1);
+f2 = @(t, v) nerve2.dynamics(t, v, nerve2);
+f3 = @(t, v) nerve3.dynamics(t, v, nerve3);
 [t1,v1] = ode45(f1, tspan, v0); % v(1): the nuerons voltage value v(2): the neurons recovery variable value t: time series over which the data is simulated
 [t2,v2] = ode45(f2, tspan, v0); % v(1): the nuerons voltage value v(2): the neurons recovery variable value t: time series over which the data is simulated
 [t3,v3] = ode45(f3, tspan, v0); % v(1): the nuerons voltage value v(2): the neurons recovery variable value t: time series over which the data is simulated
@@ -21,9 +21,9 @@ f3 = @(t, v) F_N(t, v, nerve3);
 tao = 1/(nerve1.gamma * nerve1.epsilon);
 lags = 5;
 
-f1_delay = @(t, v, lags) F_N_const_delay(t, v, lags, nerve1);
-f2_delay = @(t, v, lags) F_N_const_delay(t, v, lags, nerve2);
-f3_delay = @(t, v, lags) F_N_const_delay(t, v, lags, nerve3);
+f1_delay = @(t, v, lags) nerve1.delay_dynamics(t, v, lags, nerve1);
+f2_delay = @(t, v, lags) nerve2.delay_dynamics(t, v, lags, nerve2);
+f3_delay = @(t, v, lags) nerve3.delay_dynamics(t, v, lags, nerve3);
 
 v1_delay = dde23(f1_delay, lags, v0, tspan);
 v2_delay = dde23(f2_delay, lags, v0, tspan); 

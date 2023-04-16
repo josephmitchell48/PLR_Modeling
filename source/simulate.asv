@@ -76,28 +76,50 @@ v_tau0 = deval(v1, time*time_conversion);
 % CALCULATE MUSCLE RESPONSES %
 
 d = actionPotentials2deltas(v_tau0(1,:));
+
 twitch_time = [0:time_conversion]./time_conversion;
+
 twitch = impulse_response(twitch_time*1000, 3, 15); % time*1000 because this takes ms
+
 F_FN = conv(d, twitch);
+
+% scale to match the step function in the original Fp function
 F_FN_max = max(F_FN);
+F_FN = F_FN./F_FN_max;
+FpFN = F_FN*p.f_p;
+
+FsFN = F_FN*p.f_s;
+
+f = @(t,x) dynamics(x, p, t, [1:length(FpFN)]./time_conversion, FpFN, FsFN);
+[t_FN, r_FN] = ode45(f, tspan, y0, options);
+r_FN = r_FN(:, 1);
 
 
-f_delay=@(t, v, tau) n.delay_dynamics(t, v, tau);
-v1_delay = dde23(f_delay, tau, v0,[0 1*time_conversion]);
-v_tau = deval(v1_delay, time*time_conversion);
-  
-d_tau = actionPotentials2deltas(v_tau(1,:));
-F_FN_tau = conv(d_tau, twitch);
-F_FN_tau = F_FN_tau./F_FN_max;
-FpFN_tau = F_FN_tau*p.f_p;
-FsFN_tau = F_FN_tau*p.f_s;
+
+
+%% trying to loop it %%
+tFN_tau = cell([1 length(tau)]);
+rFN_tau = cell([1 length(tau)]);
+
+for i = 1:length(tau)
+    tau_i = tau(i);
+    f_delay=@(t, v, tau) n.delay_dynamics(t, v, tau);
+    v1_delay = dde23(f_delay, tau_i, v0,[0 1*time_conversion]);
+    v_tau = deval(v1_delay, time*time_conversion);
     
-options = odeset('RelTol', 1e-6);
-y0 = [2.68 0]; % start at radius of 2.68mm
-
-f_tau = @(t,x) dynamics(x, p, t, [1:length(FpFN_tau)]./time_conversion, FpFN_tau, FsFN_tau);
-[t, r_FN_tau] = ode45(f_tau, tspan, y0, options);
-r = r_FN_tau(:,1);
+    d_tau = actionPotentials2deltas(v_tau(1,:));
+    F_FN_tau = conv(d_tau, twitch);
+    F_FN_tau = F_FN_tau./F_FN_max;
+    FpFN_tau = F_FN_tau*p.f_p;
+    FsFN_tau = F_FN_tau*p.f_s;
+    
+    f_tau = @(t,x) dynamics(x, p, t, [1:length(FpFN_tau)]./time_conversion, FpFN_tau, FsFN_tau);
+    [t_FN_tau, r_FN_tau] = ode45(f_tau, tspan, y0, options);
+    r_FN_tau = r_FN_tau(:,1);
+    
+    tFN_tau(1,i) = t_FN_tau;
+    rFN_tau(1,i) = r_FN_tau;
+end
 
 end
 
