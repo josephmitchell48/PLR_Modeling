@@ -5,7 +5,9 @@ function [t, r] = simulate(pupil_version, tspan, tau)
 %   tspan: [t0 t_final] in seconds
 %   Outputs:
 %       t - time points
-%       r - radius values 
+%       r(1) - radius
+%       r(2) - velocity
+
 
 if pupil_version==1
     l0d = 3.59;
@@ -97,7 +99,7 @@ y0 = [2.68 0]; % start at radius of 2.68mm
 
 f_tau = @(t,x) dynamics(x, p, t, [1:length(FpFN_tau)]./time_conversion, FpFN_tau, FsFN_tau);
 [t, r_FN_tau] = ode45(f_tau, tspan, y0, options);
-r = r_FN_tau(:,1);
+r = r_FN_tau;
 
 end
 
