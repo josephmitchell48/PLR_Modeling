@@ -21,19 +21,34 @@ taus(1) = 0.00001;
 % data(7,i) = dilationAcc
 derived_data = zeros(8, length(taus));
 
-for i=1:length(taus)
-    [t, r] = simulate(p_version, tspan, taus(i));
-    [latency, half_contraction, contractVel, contractAcc, qDilationDelay, hDilationDelay, dilationVel, dilationAcc]...
-    = get_stats(t, r, 1);
-    derived_data(1,i) = latency;
-    derived_data(2,i) = half_contraction;
-    derived_data(3,i) = contractVel;
-    derived_data(4,i) = contractAcc;
-    derived_data(5,i) = qDilationDelay;
-    derived_data(6,i) = hDilationDelay;
-    derived_data(7,i) = dilationVel;
-    derived_data(8,i) = dilationAcc;
+figure();
+hold on;
+velocity = r(:,2);
+acceleration = zeros(length(velocity));
+for j = 1:length(t) - 1
+   acceleration(j) = (velocity(j + 1) - velocity(j))/(t(j + 1) - t(j));
 end
+subplot(2, 1, 1);
+plot(t, acceleration);
+title('Time vs Acceleration')
+xlabel('Time (s)');
+ylabel('Acceleration (mm/s^2)');
+
+%for i=1:length(taus)
+%    [t, r] = simulate(p_version, tspan, taus(i));
+%    [latency, half_contraction, contractVel, contractAcc, qDilationDelay, hDilationDelay, dilationVel, dilationAcc]...
+%%    = get_stats(t, r, 1);
+ %   derived_data(1,i) = latency;
+%    derived_data(2,i) = half_contraction;
+%    derived_data(3,i) = contractVel;
+%    derived_data(4,i) = contractAcc;
+%    derived_data(5,i) = qDilationDelay;
+%    derived_data(6,i) = hDilationDelay;
+%    derived_data(7,i) = dilationVel;
+%    derived_data(8,i) = dilationAcc;
+
+    
+%end
 
 writematrix(derived_data, "output.csv");
 % figure
