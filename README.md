@@ -14,8 +14,10 @@ Our approach consists of integrating multiple models. A light stimulus is fed in
 ### Neuron
 Simulating the effects of impairment on the human PLR required a mathematical model of neural activity. The literature review concluded that the optimal model for this task is the FN model due to its relative simplicity and use in previous literature surrounding the effects of alcohol on neuron dynamics [3]. The FN model is a simplification of the Hodgkin-Huxley (HH) model which is a system of four state-space equations, three that represent the sodium activation, potassium, and sodium inactivation gates open at a given time, and a fourth that represents the rate of change of a neuron's voltage during an action potential [8]. The FN model simplifies the HH model by combining the 3 equations related to ion gate activity into a single equation representing a neuron's ability to regain its resting potential [3, 8]. This reduces the number of equations and variables, while maintaining the essential features of neuronal dynamics related to the generation of action potentials and the refractory period. The two coupled differential equations of the FN model are seen below:
 <br /> 
-$$dv/dt = v-v^3/3 -\omega + I(1)\\
+```math
+dv/dt = v-v^3/3 -\omega + I(1)\\
 d\omega/dt = (v +a- \omega)(2)$$
+```
 <br /> 
 Where v is the membrane potential,  is the recovery variable, I is the initial stimulus, and a, ,  are parameters whose values are determined from literature [3]. Franca et al. altered these equations to incorporate the effects of alcohol by adding a time delay to  in the x1 state space equation [3]. This alteration results in a longer repolarization, extending the absolute refractory period, and effectively stopping the neuron from firing in fast succession. Following these simplifications, the FN model equations can be transformed into the following form:
 dvdt = v(t)(a-v(t))(v(t)-1) - (t-τ)+ I                                    (3)
