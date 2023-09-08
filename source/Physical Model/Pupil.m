@@ -1,5 +1,5 @@
 classdef Pupil
-    %Pupil is a class that stores values Yan and Yao model of PLR
+    % Pupil is a class that stores values Yan and Yao model of PLR
     
     properties
         K_c % 2pi k_c/m - normalized elastic constant for constrictor

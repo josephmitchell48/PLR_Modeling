@@ -26,7 +26,7 @@ hold on
 plot(t1, d1);
 
 
-% twitch = impulse_response(t1, 100,500,1000
+% twitch = impulse_response(t1, 100,500,1000)
 F1 = conv(d1, twitches);
 
 figure();

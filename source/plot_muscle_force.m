@@ -2,7 +2,7 @@ clc; close all
 
 n = FitzNagumo(0.008, 0.139, 0.027, 4.42); % Region 2
 
-% Table 1 fitted parameters 3: 
+% Fitted parameters (table 1 parameters 3): 
 l0d = 3.57;
 l0c = 0.93;
 Kd = 1.24;
@@ -19,7 +19,7 @@ p = Pupil(Kc, Kd, l0c, l0d, D, fp, fs, P0,tao_p, tao_s);
 t_orig = [0:0.01:1.5];
 Fp_orig = p.Fp_orig(1:0.01:2.5);
 
-time_conversion = 50000; %50 000 units of time = 1s in the nagumo model
+time_conversion = 50000; % 50 000 units of time = 1s in the nagumo model
 
 v0 = [ 0.726; 4.4273]; 
 time = 0:1:0.1*time_conversion;

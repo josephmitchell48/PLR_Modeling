@@ -1,5 +1,5 @@
 function [x_dot] = orig_dynamics(x, p, T)
-%dynamics state space dynamics for physical pupil model as in Fan and Yao
+% state space dynamics for physical pupil model as in Fan and Yao
 %   Inputs: 
 % x(1): r (radius)
 % x(2): dr/dt (radius_dot)

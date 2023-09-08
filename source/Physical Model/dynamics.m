@@ -1,5 +1,5 @@
 function [x_dot] = dynamics(x, p, T, t_F, Fp_FN, Fs_FN)
-%dynamics state space dynamics for physical pupil model as in Fan and Yao
+% Updated state space dynamics for physical pupil model as in Fan and Yao
 %   Inputs: 
 % x(1): r (radius)
 % x(2): dr/dt (radius_dot)

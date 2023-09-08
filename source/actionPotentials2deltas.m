@@ -1,6 +1,6 @@
 function [deltas] = actionPotentials2deltas(voltages)
 %actionPotentials2deltas: this function takes the timerseries voltage of
-%the nerve membrance and converts to dirac delta functions
+%the nerve membrane and converts to dirac delta functions
 %   Each nerve impulse corresponds to a '1' at the time point it passes a
 %   threshold in the 'deltas' output variable
 % Input: 

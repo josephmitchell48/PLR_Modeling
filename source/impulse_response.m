@@ -1,4 +1,6 @@
 function [values] = impulse_response(time_vector, latent_period, contraction_period)
+% Returns muscle twitch values over the given time values (time_vector) and
+% the latent period and contraction period. 
 % Note that the timestep is in milliseconds
 values = zeros(size(time_vector));
 

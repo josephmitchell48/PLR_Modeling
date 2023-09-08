@@ -3,6 +3,7 @@ function [t, r] = simulate(pupil_version, tspan, tau)
 %   pupil_version: integer corresponding to the fitted values from Yan
 %        paper
 %   tspan: [t0 t_final] in seconds
+%   tau: delay factor in FN model
 %   Outputs:
 %       t - time points
 %       r - radius values 
