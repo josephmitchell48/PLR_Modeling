@@ -1,5 +1,8 @@
-# PLR_Modeling
-## Abstract
+# PLR Modeling
+<p align="center">
+  <img src="https://github.com/josephmitchell48/PLR_Modeling/blob/main/media/overviewPLR.gif" />
+</p>
+
 Previous research indicates that the pupillary light reflex (PLR) is effective at assessing central nervous system function. Currently, there is no established solution for quickly determining the level of impairment in a non-invasive manner. This paper proposes the use of the PLR to gauge the level of alcohol intoxication based on changes in pupil constriction dynamics. The approach consisted of combining the Fitzhugh-Nagumo (FN) neuron model with the Kelvin-Voigt muscle model for pupil dynamics. In order to combine the two models, a convolution between dirac delta impulses derived from the membrane voltage-time data outputted by the FN model and a single muscle twitch was computed to generate muscle force which was later passed into the Kelvin-Voigt model. Modelling the neuron activation with the FN model elucidates the impact of alcohol on the central nervous system as well as the accompanying delay in neuron activation. The convolution of the FN action potentials with the muscle twitch dynamics produces force-time functions that appear more representative physiologically than the step function used in the base Kelvin-Voigt model. Our findings suggest that consuming alcohol causes a delay in pupil response as well as a decreased magnitude of sphincter pupillae force output. The validity of this model is confirmed by comparing pupil radius outputs to literature, yielding a delay factor (𝜏) of 35 which performed with a 1.95% error for quarter dilation time.  A positive correlation of latency with 𝜏 was also observed, further verifying the validity of the model. Overall, these results prove the efficacy of this approach and is a promising next step in reducing the frequency of motor vehicle accidents caused by alcohol intoxication.
 
 ## Motivation
