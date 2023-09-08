@@ -9,6 +9,13 @@ Drivers under the influence of alcohol cause on average 32 deaths each day in th
 Our goal is to develop an accurate method of determining intoxication levels by analyzing the pupillary light reflex (PLR) through modeling the biomechanical response of the musculoskeletal system when exposed to various wavelengths and intensities of light. In doing so, the project will encompass relating the physical responses of the musculoskeletal system with the physiological responses of the autonomic nervous system (ANS). 
 
 ## Approach
+<p align="center">
+  <img src="https://github.com/josephmitchell48/PLR_Modeling/blob/main/media/systemDiagram.png" />
+</p>
+<p align="center">
+Figure 1. Model overview
+</p>
+
 Our approach consists of integrating multiple models. A light stimulus is fed into the FN model along with impairment (𝜏). This outputs neuron action potentials over time (V(t)) which are subsequently converted to unit impulses. These Dirac delta functions are convolved with a muscle twitch to produce the profile of normalised muscle force. This profile is then delayed and scaled appropriately and used as the tension developed by the constrictor and dilator muscles in the pupil model (Fp(t) and Fs(t), respectively). The final output of the system is pupil radius over time.
 
 ### Neuron
