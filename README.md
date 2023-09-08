@@ -216,7 +216,14 @@ A partially successful model of the effect of alcohol on the PLR was created. Co
 
 ## Contributors 
 Victor Crisan   | vcrisan@uwaterloo.ca         | [LinkedIn](https://www.linkedin.com/in/victor-crisan-013347218/)
+\
 Sean Rose       | s25rose@uwaterloo.ca         | [LinkedIn](https://www.linkedin.com/in/rose-sean/)
+\
 Michael Frew    | michael.frew@uwaterloo.ca    | [LinkedIn](https://www.linkedin.com/in/michael-frew/)
+\
 Joseph Mitchell | joseph.mitchell@uwaterloo.ca |  [LinkedIn](https://www.linkedin.com/in/josephmitchell48/)
+\
 Jaeyoung Kang   | j97kang@uwaterloo.ca	       |  [LinkedIn](https://www.linkedin.com/in/jaeyoungkang0815/)
+\
+<br />
+Speaical thank you to [Dr. Richard Nuckols](https://uwaterloo.ca/systems-design-engineering/contacts/richard-nuckols) for his mentorship throughout the durration of this project.
