@@ -191,16 +191,32 @@ A partially successful model of the effect of alcohol on the PLR was created. Co
 [7] Xiaofei Fan and Gang Yao, “Modeling transient pupillary light reflex induced by a short light flash,” IEEE Transactions on Biomedical Engineering, vol. 58, no. 1, pp. 36–42, 2011.
 
 [8] P. Wallisch, M. E. Lusignan, M. D. Benayoun, T. I. Baker, A. S. Dickey, and N. G. Hatsopoulos, Matlab for neuroscientists: An introduction to scientific computing in Matlab, Second. Amsterdam: Elsevier, 2014.
+
 [9] J. Byrne, “Skeletal muscle: Whole muscle physiology,” Motor Units and Muscle Twitches. [Online]. Available: https://content.byui.edu/file/a236934c-3c60-4fe9-90aa-d343b3e3a640/1/module7/readings/muscle_twitches.html. [Accessed: 10-Apr-2023]. 
+
 [10] R. Raikova, H. Aladjov, J. Celichowski, and P. Krutki, “An approach for simulation of the muscle force modeling it by summation of motor unit contraction forces,” Computational and Mathematical Methods in Medicine, vol. 2013, pp. 1–10, 2013. ​
+
 [11] A. J. Fuglevand, D. A. Winter, and A. E. Patla, “Models of recruitment and rate coding organization in motor-unit pools,” Journal of Neurophysiology, vol. 70, no. 6, pp. 2470–2488, 1993. ​
+
 [12] B. Hafen and B. Burns, “Physiology, Smooth Muscle,” National Center for Biotechnology Information. [Online]. Available: https://pubmed.ncbi.nlm.nih.gov/30252381/. [Accessed: 10-Apr-2023]
+
 [13] “Skeletal muscle: Whole muscle physiology,” Motor Units and Muscle Twitches. [Online]. Available: https://content.byui.edu/file/a236934c-3c60-4fe9-90aa-d343b3e3a640/1/module7/readings/muscle_twitches.html. [Accessed: 15-Apr-2023].
+
 [14] C. J. De Luca, “A model for a motor unit train recorded during constant force isometric contractions,” Biological Cybernetics, vol. 19, no. 3, pp. 159–167, 1975. 
-[15]  J. Byrne, “Chapter 1: Resting Potentials and Action Potentials,” Department of Neurobiology and Anatomy, McGovern Medical School. [Online]. Available: https://nba.uth.tmc.edu/neuroscience/m/s1/chapter01.html. [Accessed: 10-Apr-2023]. 
+
+[15] J. Byrne, “Chapter 1: Resting Potentials and Action Potentials,” Department of Neurobiology and Anatomy, McGovern Medical School. [Online]. Available: https://nba.uth.tmc.edu/neuroscience/m/s1/chapter01.html. [Accessed: 10-Apr-2023]. 
+
 [16] “Action potentials,” Image for Cardiovascular Physiology Concepts, Richard E Klabunde PhD. [Online]. Available: https://www.cvphysiology.com/Arrhythmias/A010. [Accessed: 15-Apr-2023].
 
 [17] A. Kaifie, M. Reugels, T. Kraus, and M. Kursawe, “The pupillary light reflex (PLR) as a marker for the ability to work or drive – a feasibility study,” Journal of Occupational Medicine and Toxicology, vol. 16, no. 1, 2021​
 
 [18] M. Gronbaek, “The positive and negative health effects of alcohol- and the Public Health Implications,” Journal of Internal Medicine, vol. 265, no. 4, pp. 407–420, 2009.
+
 [19] R. Lozi, M.-S. Abdelouahab, and G. Chen, “Mixed-mode oscillations based on complex canard explosion in a fractional-order Fitzhugh-Nagumo model.,” Applied Mathematics and Nonlinear Sciences, vol. 5, no. 2, pp. 239–256, 2020. 
+
+## Contributors 
+Victor Crisan   | vcrisan@uwaterloo.ca         | [LinkedIn](https://www.linkedin.com/in/victor-crisan-013347218/)
+Sean Rose       | s25rose@uwaterloo.ca         | [LinkedIn](https://www.linkedin.com/in/rose-sean/)
+Michael Frew    | michael.frew@uwaterloo.ca    | [LinkedIn](https://www.linkedin.com/in/michael-frew/)
+Joseph Mitchell | joseph.mitchell@uwaterloo.ca |  [LinkedIn](https://www.linkedin.com/in/josephmitchell48/)
+Jaeyoung Kang   | j97kang@uwaterloo.ca	       |  [LinkedIn](https://www.linkedin.com/in/jaeyoungkang0815/)
