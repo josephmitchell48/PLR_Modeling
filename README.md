@@ -191,4 +191,4 @@ Joseph Mitchell | joseph.mitchell@uwaterloo.ca |  [LinkedIn](https://www.linkedi
 Jaeyoung Kang   | j97kang@uwaterloo.ca	       |  [LinkedIn](https://www.linkedin.com/in/jaeyoungkang0815/)
 \
 <br />
-Speaical thank you to [Dr. Richard Nuckols](https://uwaterloo.ca/systems-design-engineering/contacts/richard-nuckols) for his mentorship throughout the durration of this project.
+Special thank you to [Dr. Richard Nuckols](https://uwaterloo.ca/systems-design-engineering/contacts/richard-nuckols) for his mentorship throughout the duration of this project.
