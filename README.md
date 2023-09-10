@@ -178,6 +178,8 @@ A partially successful model of the effect of alcohol on the PLR was created. Co
 [19] R. Lozi, M.-S. Abdelouahab, and G. Chen, “Mixed-mode oscillations based on complex canard explosion in a fractional-order Fitzhugh-Nagumo model.,” Applied Mathematics and Nonlinear Sciences, vol. 5, no. 2, pp. 239–256, 2020. 
 
 ## Contributors 
+Kyle Scenna     | kscenna@uwaterloo.ca	       |  [LinkedIn](https://www.linkedin.com/in/kyle-scenna-2776b3202/?originalSubdomain=ca)
+\
 Victor Crisan   | vcrisan@uwaterloo.ca         | [LinkedIn](https://www.linkedin.com/in/victor-crisan-013347218/)
 \
 Sean Rose       | s25rose@uwaterloo.ca         | [LinkedIn](https://www.linkedin.com/in/rose-sean/)
